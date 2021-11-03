@@ -19,15 +19,23 @@ const BalanceCard = () => {
     <LinearGradient 
       colors={[ '#B066FE', '#63E2FF' ]}
       start={{x: 0, y: 1}} end={{x: 1, y: 0}}
-      style={tw('m-4 p-4 bg-blue-400 rounded-xl w-11/12 h-48 justify-between')}
+      style={tw('p-4 bg-blue-400 rounded-xl w-11/12 h-48 justify-between')}
     >
       <View>
         <Text style={tw('text-white text-3xl')}>{balanceText}</Text>
         <Text style={tw('text-gray-100')}>Your balance is equivalent to</Text>
       </View>
       <View style={tw('flex-row')}>
-        <Button text="Deposit" textStyle={tw('text-white')} style={tw('m-1 p-1 bg-gray-100 bg-opacity-30 rounded-sm')}/>
-        <Button text="Withdraw" textStyle={tw('text-white')} style={tw('m-1 p-1 bg-gray-100 bg-opacity-30 rounded-sm')} />
+        <Button 
+          style={tw('m-1 p-1 bg-gray-100 bg-opacity-30 rounded-sm')}
+        >
+          <Text style={tw('text-white')} >Deposit</Text>
+        </Button>
+        <Button 
+          style={tw('m-1 p-1 bg-gray-100 bg-opacity-30 rounded-sm')}
+        >
+          <Text style={tw('text-white')} >Withdraw</Text>
+        </Button>
       </View>
     </LinearGradient>
   );

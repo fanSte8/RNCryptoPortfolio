@@ -1,12 +1,16 @@
 import React from 'react';
-import { View } from 'react-native';
-import BalanceCard from '../components/BalanceCard';
+import { ScrollView, View } from 'react-native';
+import tw from 'tailwind-rn';
 
-const PortfolioScreen = props => {
+import BalanceCard from '../components/BalanceCard';
+import CryptoCurrenciesList from '../components/CryptoCurrenciesList';
+
+const PortfolioScreen = () => {
   return (
-    <View>
+    <ScrollView contentContainerStyle={tw('m-2 justify-center items-center')}>
       <BalanceCard />
-    </View>
+      <CryptoCurrenciesList />
+    </ScrollView>
   );
 };
 
