@@ -1,14 +1,13 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { View } from 'react-native';
+import BalanceCard from '../components/BalanceCard';
 
 const PortfolioScreen = props => {
   return (
     <View>
-      
+      <BalanceCard />
     </View>
   );
 };
-
-const styles = StyleSheet.create({});
 
 export default PortfolioScreen;

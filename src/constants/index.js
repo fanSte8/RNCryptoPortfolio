@@ -1,0 +1,1 @@
+export const TOP_FOUR_COINS_EUR = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&per_page=4';
