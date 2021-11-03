@@ -18,7 +18,7 @@ const BalanceCard = () => {
   return (
     <LinearGradient 
       colors={[ '#B066FE', '#63E2FF' ]}
-      start={{x: 0, y: 0}} end={{x: 1, y: 0}}
+      start={{x: 0, y: 1}} end={{x: 1, y: 0}}
       style={tw('m-4 p-4 bg-blue-400 rounded-xl w-11/12 h-48 justify-between')}
     >
       <View>
