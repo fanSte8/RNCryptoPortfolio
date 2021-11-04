@@ -19,6 +19,7 @@ const TradingScreen = props => {
       { 
         data.map(coinData => (
           <Tab.Screen 
+            key={coinData.symbol} 
             name={coinData.symbol} 
             options={{
               title: `${coinData.symbol}➞EUR`
@@ -26,7 +27,6 @@ const TradingScreen = props => {
           >
             {() => (
               <TradingTab 
-                key={coinData.symbol} 
                 imageSource={{ uri: coinData.image }} 
                 name={coinData.name}
                 symbol={coinData.symbol}
