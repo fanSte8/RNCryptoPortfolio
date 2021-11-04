@@ -12,7 +12,6 @@ const BalanceCard = () => {
 
   const totalBalance = data ? portfolioData.balance + data.reduce((prev, current, index) => 
     prev + current.current_price * (portfolioData.cryptoCurrencies[index] || 0), 0) : 0;
-  const balanceText = `€ ${totalBalance.toFixed(2)}`;
 
   return (
     <LinearGradient 
@@ -21,7 +20,7 @@ const BalanceCard = () => {
       style={tw('p-4 bg-blue-400 rounded-xl w-11/12 h-48 justify-between')}
     >
       <View>
-        <Text style={tw('text-white text-3xl')}>{balanceText}</Text>
+        <Text style={tw('text-white text-3xl')}>{`€ ${totalBalance.toFixed(2)}`}</Text>
         <Text style={tw('text-gray-100')}>Your balance is equivalent to</Text>
       </View>
       <View style={tw('flex-row')}>

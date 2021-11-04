@@ -24,7 +24,15 @@ const TradingScreen = props => {
               title: `${coinData.symbol}➞EUR`
             }}
           >
-            {() => <TradingTab coinData={coinData} />}
+            {() => (
+              <TradingTab 
+                key={coinData.symbol} 
+                imageSource={{ uri: coinData.image }} 
+                name={coinData.name}
+                symbol={coinData.symbol}
+                currentPrice={coinData.current_price}
+              />
+            )}
           </Tab.Screen>
         )) 
       }
