@@ -1,5 +1,6 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { View } from 'react-native';
+import UserIcon from '../icons/UserIcon';
 
 const UserScreen = props => {
   return (
@@ -9,6 +10,9 @@ const UserScreen = props => {
   );
 };
 
-const styles = StyleSheet.create({});
+export const userOptions = {
+  tabBarIcon: ({ color, size }) => <UserIcon fill={color} width={size} height={size} />,
+  tabBarLabel: () => null 
+};
 
 export default UserScreen;

@@ -4,6 +4,7 @@ import tw from 'tailwind-rn';
 
 import BalanceCard from '../components/BalanceCard';
 import CryptoCurrenciesList from '../components/CryptoCurrenciesList';
+import ListViewIcon from '../icons/ListViewIcon';
 
 const PortfolioScreen = () => {
   return (
@@ -12,6 +13,11 @@ const PortfolioScreen = () => {
       <CryptoCurrenciesList />
     </ScrollView>
   );
+};
+
+export const portfolioOptions = {
+  tabBarIcon: ({ color, size }) => <ListViewIcon fill={color} width={size} height={size} />,
+  tabBarLabel: () => null 
 };
 
 export default PortfolioScreen;

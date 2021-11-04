@@ -2,12 +2,9 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import PortfolioScreen from '../screens/ProtfolioScreen';
-import TradingScreen from '../screens/TradingScreen';
-import UserScreen from '../screens/UserScreen';
-import ListViewIcon from '../icons/ListViewIcon';
-import CurrencyDolarIcon from '../icons/CurrencyDolarIcon';
-import UserIcon from '../icons/UserIcon';
+import PortfolioScreen, { portfolioOptions } from '../screens/ProtfolioScreen';
+import TradingScreen, { tradingOptions } from '../screens/TradingScreen';
+import UserScreen, { userOptions } from '../screens/UserScreen';
 import CogIcon from '../icons/CogIcon';
 import Colors from '../constants/color';
 
@@ -19,18 +16,9 @@ const AppNavigator = () => (
       headerRight: () => <CogIcon style={{ marginRight: 10 }} width={25} height={25} />,
       tabBarActiveTintColor: Colors.iconColor
     }}>
-      <Tab.Screen name="Portfolio" component={PortfolioScreen} options={{
-        tabBarIcon: ({ color, size }) => <ListViewIcon fill={color} width={size} height={size} />,
-        tabBarLabel: () => null 
-      }} />
-      <Tab.Screen name="Trading" component={TradingScreen} options={{
-        tabBarIcon: ({ color, size }) => <CurrencyDolarIcon fill={color} width={size} height={size} />,
-        tabBarLabel: () => null 
-      }} />
-      <Tab.Screen name="User" component={UserScreen} options={{
-        tabBarIcon: ({ color, size }) => <UserIcon fill={color} width={size} height={size} />,
-        tabBarLabel: () => null 
-      }} />
+      <Tab.Screen name="Portfolio" component={PortfolioScreen} options={portfolioOptions} />
+      <Tab.Screen name="Trading" component={TradingScreen} options={tradingOptions} />
+      <Tab.Screen name="User" component={UserScreen} options={userOptions} />
     </Tab.Navigator>
   </NavigationContainer>
 );

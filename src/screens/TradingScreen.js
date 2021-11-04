@@ -5,6 +5,7 @@ import useSWR from 'swr';
 
 import { TOP_FOUR_COINS_EUR } from '../constants';
 import TradingTab from '../components/TradingTab';
+import CurrencyDolarIcon from '../icons/CurrencyDolarIcon';
 
 const TradingScreen = props => {
   const { data } = useSWR(TOP_FOUR_COINS_EUR);
@@ -38,6 +39,11 @@ const TradingScreen = props => {
       }
     </Tab.Navigator>
   );
+};
+
+export const tradingOptions = {
+  tabBarIcon: ({ color, size }) => <CurrencyDolarIcon fill={color} width={size} height={size} />,
+  tabBarLabel: () => null 
 };
 
 export default TradingScreen;
