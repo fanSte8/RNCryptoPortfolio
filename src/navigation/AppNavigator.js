@@ -9,13 +9,15 @@ import ListViewIcon from '../icons/ListViewIcon';
 import CurrencyDolarIcon from '../icons/CurrencyDolarIcon';
 import UserIcon from '../icons/UserIcon';
 import CogIcon from '../icons/CogIcon';
+import Colors from '../constants/color';
 
 const Tab = createBottomTabNavigator();
 
 const AppNavigator = () => (
   <NavigationContainer>
     <Tab.Navigator screenOptions={{ 
-      headerRight: () => <CogIcon style={{ marginRight: 10 }} width={25} height={25} /> 
+      headerRight: () => <CogIcon style={{ marginRight: 10 }} width={25} height={25} />,
+      tabBarActiveTintColor: Colors.iconColor
     }}>
       <Tab.Screen name="Portfolio" component={PortfolioScreen} options={{
         tabBarIcon: ({ color, size }) => <ListViewIcon fill={color} width={size} height={size} />,
