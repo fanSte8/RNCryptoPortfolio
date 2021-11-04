@@ -1,8 +1,7 @@
 import React from 'react'
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import useSWR from 'swr';
 import tw from 'tailwind-rn';
-import Button from './CustomizableButton';
 
 import { TOP_FOUR_COINS_EUR } from '../constants';
 import portfolioData from '../data/data'; 
@@ -12,7 +11,7 @@ const BalanceCard = () => {
   const { data } = useSWR(TOP_FOUR_COINS_EUR);
 
   const totalBalance = data ? portfolioData.balance + data.reduce((prev, current, index) => 
-    prev + current.current_price * portfolioData.cryptoCurrencies[index], 0) : 0;
+    prev + current.current_price * (portfolioData.cryptoCurrencies[index] || 0), 0) : 0;
   const balanceText = `€ ${totalBalance.toFixed(2)}`;
 
   return (
@@ -26,16 +25,16 @@ const BalanceCard = () => {
         <Text style={tw('text-gray-100')}>Your balance is equivalent to</Text>
       </View>
       <View style={tw('flex-row')}>
-        <Button 
+        <TouchableOpacity 
           style={tw('m-1 p-1 bg-gray-100 bg-opacity-30 rounded-sm')}
         >
           <Text style={tw('text-white')} >Deposit</Text>
-        </Button>
-        <Button 
+        </TouchableOpacity>
+        <TouchableOpacity 
           style={tw('m-1 p-1 bg-gray-100 bg-opacity-30 rounded-sm')}
         >
           <Text style={tw('text-white')} >Withdraw</Text>
-        </Button>
+        </TouchableOpacity>
       </View>
     </LinearGradient>
   );

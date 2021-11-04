@@ -12,7 +12,7 @@ import CogIcon from '../icons/CogIcon';
 
 const Tab = createBottomTabNavigator();
 
-const MainNavigator = () => (
+const AppNavigator = () => (
   <NavigationContainer>
     <Tab.Navigator screenOptions={{ 
       headerRight: () => <CogIcon style={{ marginRight: 10 }} width={25} height={25} /> 
@@ -33,4 +33,4 @@ const MainNavigator = () => (
   </NavigationContainer>
 );
 
-export default MainNavigator;
+export default AppNavigator;
