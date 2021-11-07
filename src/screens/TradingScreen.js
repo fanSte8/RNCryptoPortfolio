@@ -13,7 +13,7 @@ const TradingScreen = props => {
 
   const navigation = useNavigation();
   const route = useRoute();
-  const selectedTab = route.params.symbol;
+  const selectedTab = route.params?.symbol;
 
   useEffect(() => {
     if (!selectedTab) {
