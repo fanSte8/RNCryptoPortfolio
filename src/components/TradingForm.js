@@ -34,6 +34,7 @@ const TradingForm = ({ coinPrice }) => {
             value={amount.toString()} 
             onChangeText={handleAmountChange}
             style={tw('border-b border-gray-400 text-xl')} 
+            testID="purchaseValue"
           />
         </View>
         <View style={tw('mt-4 flex-row items-center')}>
