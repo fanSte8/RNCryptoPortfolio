@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-import useSWR from 'swr';
 import { useNavigation, useRoute } from '@react-navigation/core';
+import useSWR from 'swr';
 
 import { TOP_FOUR_COINS_EUR } from '../constants';
 import TradingTab from '../components/TradingTab';

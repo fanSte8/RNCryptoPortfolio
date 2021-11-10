@@ -25,7 +25,7 @@
     "react-native-svg": "^12.1.1",
     "react-native-tab-view": "^3.1.1",
     "swr": "^1.0.1",
-    "tailwind-rn": "^3.0.1"
+    "tailwind-react-native-classnames": "^1.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
