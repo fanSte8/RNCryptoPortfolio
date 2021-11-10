@@ -11,9 +11,7 @@ const TradingTab = ({ imageSource, symbol, name, currentPrice }) => {
     <View style={tw`m-2 p-2 flex-1`}>
       <View style={tw`m-4 flex-row justify-between items-center justify-between`}>
         <View style={tw`flex-row items-center justify-between`}>
-          <Image style={tw`h-6 w-6`}
-            source={ imageSource } 
-          />
+          <Image style={tw`h-6 w-6`} source={ imageSource } />
           <Text style={tw`font-bold text-xl ml-2`}>{symbol.toUpperCase()}</Text>
           <Text style={tw`text-lg ml-2 text-gray-400`}>{name}</Text>
         </View>

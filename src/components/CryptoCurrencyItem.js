@@ -10,6 +10,7 @@ const CryptoCurrencyItem = ({ name, symbol, price, amount, imageSource }) => {
       onPress={() => {
         navigation.navigate('Trading', { symbol });
       }}
+      testID={symbol}
     >
       <View style={tw`flex-row items-center pt-4 pb-4 border-b border-gray-300`}>
         <Image style={tw`mr-2 w-10 h-10`} source={imageSource} />
