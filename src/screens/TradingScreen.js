@@ -16,11 +16,9 @@ const TradingScreen = props => {
   const selectedTab = route.params?.symbol;
 
   useEffect(() => {
-    if (!selectedTab) {
-      return;
+    if (selectedTab) {
+      navigation.navigate(selectedTab);
     }
-    
-    navigation.navigate(selectedTab);
   }, [selectedTab]);
 
   if (!data) {

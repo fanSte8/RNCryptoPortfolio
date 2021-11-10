@@ -50,19 +50,19 @@ const TradingForm = ({ coinPrice }) => {
           </View>
           <View style={tw`flex-row`}>
             <TouchableOpacity 
-              style={{ ...tw`border p-1 m-1`, borderColor: amountOption === '25%' ? Colors.iconColor : '#ccc'}}
+              style={tw.style('border p-1 m-1', { borderColor: amountOption === '25%' ? Colors.iconColor : '#ccc' })}
               onPress={() => handlePriceChange(data.balance / 4, '25%')}
             >
               <Text style={{ color: amountOption === '25%' ? Colors.iconColor : '#ccc' }}>25%</Text>
             </TouchableOpacity>
             <TouchableOpacity 
-              style={{ ...tw`border p-1 m-1`, borderColor: amountOption === '50%' ? Colors.iconColor : '#ccc'}}
+              style={tw.style('border p-1 m-1', { borderColor: amountOption === '50%' ? Colors.iconColor : '#ccc' })}
               onPress={() => handlePriceChange(data.balance / 2, '50%')}
             >
               <Text style={{ color: amountOption === '50%' ? Colors.iconColor : '#ccc' }}>50%</Text>
             </TouchableOpacity>
             <TouchableOpacity 
-              style={{ ...tw`border p-1 m-1`, borderColor: amountOption === '100%' ? Colors.iconColor : '#ccc'}}
+              style={tw.style('border p-1 m-1', { borderColor: amountOption === '100%' ? Colors.iconColor : '#ccc' })}
               onPress={() => handlePriceChange(data.balance, '100%')}
             >
               <Text style={{ color: amountOption === '100%' ? Colors.iconColor : '#ccc' }}>100%</Text>
